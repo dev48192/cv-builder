@@ -1,10 +1,13 @@
 import React from 'react';
-import { SearchLottieFiles } from './components/SearchLottieFiles';
+import Home from './components/Home';
+import { SmartAppProvider } from './states';
 
 function App() {
   return (
     <div className={'base-background'}>
-        <SearchLottieFiles/>
+        <SmartAppProvider>
+            <Home/>
+        </SmartAppProvider>
     </div>
   );
 }
