@@ -1,36 +1,32 @@
-import React, { useEffect } from 'react';
-import { Button } from 'react-bootstrap';
+import React from 'react';
 import { useSmartAppState } from '../states';
-import { SmartAppActions } from '../states/actions';
-import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
+import { Button } from 'react-bootstrap';
 import SpeechRecognitionComponent from './SpeechRecognition';
 import './style.scss';
+import { useHome } from '../hooks/useHome';
 
 const Home = () => {
     const {
         smartAppState:{
             isListening,
-        },
-        dispatchSmartAppState
+        }, 
     } = useSmartAppState();
-
     const {
-        transcript,
-        resetTranscript,
-        browserSupportsSpeechRecognition
-    } = useSpeechRecognition();
-
-    const handleListening = () => {
-        dispatchSmartAppState({
-            type: SmartAppActions.UPDATE_LISTENING_STATE,
-            isListening: true,
-        });
-        SpeechRecognition.startListening({continuous: true});
-    }
+        model:{
+            transcript,
+            browserSupportsSpeechRecognition,
+        },
+        operations:{
+            handleListening,
+        }
+    } = useHome();
     return (
         <>
             {isListening?(
-                 <SpeechRecognitionComponent transcript={transcript}/>
+                 <SpeechRecognitionComponent
+                    transcript={transcript} 
+                    appSupported={browserSupportsSpeechRecognition}
+                />
             ):(
                 <div className='button-container'>
                     <Button variant="primary" className='start-button' onClick={handleListening}>
