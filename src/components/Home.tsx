@@ -14,16 +14,23 @@ const Home = () => {
         dispatchSmartAppState
     } = useSmartAppState();
 
+    const {
+        transcript,
+        resetTranscript,
+        browserSupportsSpeechRecognition
+    } = useSpeechRecognition();
+
     const handleListening = () => {
         dispatchSmartAppState({
             type: SmartAppActions.UPDATE_LISTENING_STATE,
             isListening: true,
         });
+        SpeechRecognition.startListening({continuous: true});
     }
     return (
         <>
             {isListening?(
-                 <SpeechRecognitionComponent transcript={''}/>
+                 <SpeechRecognitionComponent transcript={transcript}/>
             ):(
                 <div className='button-container'>
                     <Button variant="primary" className='start-button' onClick={handleListening}>
