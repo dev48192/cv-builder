@@ -13,7 +13,6 @@ const Home = () => {
         },
         dispatchSmartAppState
     } = useSmartAppState();
-    
 
     const handleListening = () => {
         dispatchSmartAppState({
