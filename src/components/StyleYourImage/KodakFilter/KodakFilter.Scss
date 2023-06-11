@@ -1,0 +1,16 @@
+.kodak-filter-container {
+    display: flex;
+    justify-content: start;
+}
+.left-bar {
+    width: 40px;
+    height: fit-content;
+    display: flex;
+    white-space: nowrap;
+}
+.right-bar {
+    width: 40px;
+    height: fit-content;
+    display: flex;
+    white-space: nowrap;
+}

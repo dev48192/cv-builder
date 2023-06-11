@@ -1,12 +1,13 @@
 import React from 'react';
-import Home from './components/Home';
 import { SmartAppProvider } from './states';
+import AppRoutes from './components/AppRoutes';
+
 
 function App() {
   return (
     <div className={'base-background'}>
         <SmartAppProvider>
-            <Home/>
+            <AppRoutes/>
         </SmartAppProvider>
     </div>
   );
