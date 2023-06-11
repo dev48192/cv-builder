@@ -70,3 +70,22 @@ export const DEFAULT_OPTIONS = [
       unit: "px"
     }
   ];
+
+  export const KODAK_INITIAL =[
+    {
+      name: 0,
+      value: 110,
+    },
+    {
+      name: 1,
+      value: 110,
+    },
+    {
+      name: 3,
+      value: 60,
+    },
+    {
+      name: 5,
+      value: 25,
+    }
+  ]
