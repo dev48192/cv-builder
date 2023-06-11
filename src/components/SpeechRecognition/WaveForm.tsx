@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import Lottie, { LottieRefCurrentProps } from "lottie-react";
-import waveformAnimation from '../assets/waveform-animation.json';
+import waveformAnimation from '../../assets/waveform-animation.json';
 import './style.scss';
 
 const WaveForm: React.FC = () => {

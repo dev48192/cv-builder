@@ -1,0 +1,41 @@
+.style-image-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.image-filter {
+  width: 50%;
+  height: 100%;
+}
+.input-image-container {
+  display: flex;
+  justify-content: center;
+}
+.tab-container {
+  margin-top: 20px;
+  background-color: #f7c0fb;
+}
+.image-output-container {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  border: 1px solid #ebebeb;
+}
+.filters {
+  padding: 24px;
+}
+.single-filter-container {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.filter-title {
+  font-weight: 500;
+  color: #484646;
+}
+.slider {
+  width: 100%;
+}
+.tab-item {
+  cursor: pointer;
+}
