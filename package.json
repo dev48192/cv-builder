@@ -16,7 +16,7 @@
     "regenerator-runtime": "^0.13.9"
   },
   "scripts": {
-    "start": "webpack serve",
+    "start": "webpack serve --port 3000",
     "build": "webpack --mode production"
   },
   "devDependencies": {
