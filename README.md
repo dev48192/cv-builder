@@ -1,4 +1,4 @@
-## Web-Typescript-Webpack-Template
+## CV-Builder-Template
 ---
 
-Template to easy start a react project with typescript and webpack
+Template to easy create CV
