@@ -18,17 +18,17 @@ module.exports ={
     module: {
       rules: [
         {
-            test: /\.[jt]sx?$/,
+          test: /\.[jt]sx?$/,
           use: "babel-loader",
           exclude: /node_modules/,
         },
         {
-            test: /\.s[ac]ss$/i,
+            test: /\.css$/i,
             use: [
               "style-loader",
               "css-loader",
               "sass-loader",
-            ],
+            ]
           },
           {
             test: /\.(png|jpe?g|svg)$/,
